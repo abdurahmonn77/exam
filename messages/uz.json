@@ -1,0 +1,15 @@
+{
+    "HeaderTopNavList": {
+        "about-us":"Biz haqimizda",
+        "products":"Mahsulotlar",
+        "contacts":"Bog'lanish",
+         "tashkent":"Toshkent"
+    },
+    "HeaderCenterContent":{
+      "category":"Turkum",
+        "inputPlaceholder":"Nima qidirmoqdasiz?"
+    },
+    "HeroContent":{
+      "more":"Batafsil"
+    }
+  }
