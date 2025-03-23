@@ -9,9 +9,10 @@ import React, { useContext, useState } from 'react'
 
 const HeaderPopamCategory = () => {
   const {openCategory, setOpenCategory} = useContext(Context)
-  const {data:categoryList, isLoading} = getCategory()
+  const {data:categoryList} = getCategory()
   const [childCategory, setChildCategory] = useState<CategoryType>()
   const [activeCategory, setActiveCategory] = useState<number | null>(null)
+
   function handleShowCategoryChild(obj:CategoryType){
     setChildCategory(obj)
     setActiveCategory(obj.id)

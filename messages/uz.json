@@ -11,5 +11,11 @@
     },
     "HeroContent":{
       "more":"Batafsil"
+    },
+    "Products":{
+      "title":"Eng mashxur mahsulotlar",
+      "basket":"Savatcha",
+      "more":"Ko’proq",
+      "discount":"Aksiyadagi tovarlar"
     }
   }

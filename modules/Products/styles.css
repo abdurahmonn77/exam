@@ -1,0 +1,14 @@
+.products>.swiper {
+  width: 100%;
+}
+
+.products>.swiper>.swiper-wrapper>.swiper-slide {
+  text-align: start;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 273px !important;
+  margin-right: 30px !important;
+}
