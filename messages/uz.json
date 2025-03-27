@@ -1,21 +1,43 @@
 {
-    "HeaderTopNavList": {
-        "about-us":"Biz haqimizda",
-        "products":"Mahsulotlar",
-        "contacts":"Bog'lanish",
-         "tashkent":"Toshkent"
-    },
-    "HeaderCenterContent":{
-      "category":"Turkum",
-        "inputPlaceholder":"Nima qidirmoqdasiz?"
-    },
-    "HeroContent":{
-      "more":"Batafsil"
-    },
-    "Products":{
-      "title":"Eng mashxur mahsulotlar",
-      "basket":"Savatcha",
-      "more":"Ko’proq",
-      "discount":"Aksiyadagi tovarlar"
-    }
+  "HeaderTopNavList": {
+    "about-us": "Biz haqimizda",
+    "products": "Mahsulotlar",
+    "contacts": "Bog'lanish",
+    "tashkent": "Toshkent"
+  },
+  "HeaderCenterContent": {
+    "category": "Turkum",
+    "inputPlaceholder": "Nima qidirmoqdasiz?"
+  },
+  "HeroContent": {
+    "more": "Batafsil"
+  },
+  "Products": {
+    "title": "Eng mashxur mahsulotlar",
+    "basket": "Savatcha",
+    "more": "Ko’proq",
+    "discount": "Aksiyadagi tovarlar"
+  },
+  "SingleProduct": {
+    "price": "Narx",
+    "parting-pay": "Oyiga 456 999 uszdan muddatli to’lov",
+    "save": "Savatga qo'shish",
+    "purchase": "Xarid qilish",
+    "delivery": "Yetkazib berish O’zbekiston bo’ylab",
+    "shop-promotion": "Do’kondi o’zidan olib ketishingiz mumkin",
+    "delivery-date": "Tahminiy yetkazib berish vaqti 1 kundan 3 kungacha......",
+    "features": "Telfon xususiyatlari",
+    "opinions": "Mijozlarni fikrlari",
+    "lastSeen": "Oxirgi ko’rgan mahsulotlar",
+    "comment": "Chap tovoni bilan yozilgan eng noqulay dastur. Interfeys noqulay. Biror narsani sotuvga qo'yish imkon qadar qiyin. Tugmalardagi yashirin yorliqlardagi duvarcılıkdagi yorliqlarga kirishingiz kerak. Adabini berish; Qoyil",
+    "color": "Rangni tanlang:"
+  },
+  "Footer": {
+    "socials": "Bizning ijtimoiy tarmoqlarda",
+    "app": "Mobil ilovani yuklab oling",
+    "menu": "Menyu",
+    "conact": "Aloqa",
+    "question": "Savol bormi?",
+    "ask": " O’zingiz qiziqtirgan savollarni bering"
   }
+}

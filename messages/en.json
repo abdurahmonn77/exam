@@ -1,21 +1,50 @@
 {
   "HeaderTopNavList": {
-      "about-us":"About us",
-      "products":"Products",
-      "contacts":"Contact",
-      "tashkent":"Tashkent"
+    "about-us": "About us",
+    "products": "Products",
+    "contacts": "Contact",
+    "tashkent": "Tashkent"
   },
-  "HeaderCenterContent":{
-    "category":"Category",
-    "inputPlaceholder":"What are you looking for?"
+  "HeaderCenterContent": {
+    "category": "Category",
+    "inputPlaceholder": "What are you looking for?"
   },
-  "HeroContent":{
-    "more":"More"
+  "HeroContent": {
+    "more": "More"
   },
-  "Products":{
-    "title":"Most popular products",
-    "basket":"Save",
-    "more":"More",
-    "discount":"Discount products"
+  "Products": {
+    "title": "Most popular products",
+    "basket": "Save",
+    "more": "More",
+    "discount": "Discount products"
+  },
+  "SingleProduct": {
+    "price": "Price",
+    "parting-pay": "Monthly payment from 456 999 UZS",
+    "save": "Save",
+    "purchase": "Purchase",
+    "delivery": "Delivery throughout Uzbekistan",
+    "shop-promotion": "You can take it from the store",
+    "delivery-date": "Estimated delivery time from 1 to 3 days......",
+    "features": "Phone features",
+    "opinions": "Customer opinions",
+    "lastSeen": "Last viewed products",
+    "comment": "The most inconvenient application written with the left heel. The interface is awkward. Putting something up for sale is as difficult as possible. You need to go in the tab in the masonry in the hidden tabs in the buttons. Kick-ass",
+    "color": "Choose color"
+  },
+  "Footer": {
+    "socials": "Our social media",
+    "app": "Download our app",
+    "menu": "Menu",
+    "menuList": {
+      "about": "About us",
+      "usage": "Usage terms",
+      "security": "Privace and security politics",
+      "refund": "Politic of refunding goods",
+      "contanct": "Contanct us"
+    },
+    "contact": "Contact",
+    "question": "Have a question?",
+    "ask": "Ask the questions you are interested in"
   }
 }
