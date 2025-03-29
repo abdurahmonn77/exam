@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AppStoreIcon,
   ChatIcon,
@@ -9,10 +11,19 @@ import {
 } from "@/assets/icons";
 import { useTranslations } from "next-intl";
 import { FaInstagramSquare } from "react-icons/fa";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Input } from "antd";
 
 const Footer = () => {
+  const [isClient, setIsClient] = useState(false);
+  const t = useTranslations("Footer");
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
   const menuList = [
     "Ashyo haqida",
     "Foydalanish shartlari",
@@ -20,7 +31,7 @@ const Footer = () => {
     "Mahsulotlarni va tovarlarni qaytarish siyosati",
     "Biz bilan aloqa",
   ];
-  const t = useTranslations("Footer");
+
   return (
     <>
       <div className="block sm:hidden mt-[60px] w-full px-[10px]">
@@ -40,41 +51,34 @@ const Footer = () => {
       </div>
       <div className="px-[10px] py-[30px] lg:px-[131px] lg:py-[60px] flex justify-between">
         <div className="w-[33%] hidden sm:block">
-          <div>
-            <strong className="text-[16px] md:text-[20px] font-bold text-[#000000B2]">
-              {t("socials")}
-            </strong>
-            <div className="flex md:gap-1 mt-[10px] md:mt-[21px]">
-              <span className="scale-[0.8] md:scale-1 w-[44px] h-[40px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <FcbookIcon />
-              </span>
-              <span className="scale-[0.8] md:scale-1 w-[44px] h-[40px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <YtIcon />
-              </span>
-              <span className="scale-[0.8] md:scale-1 w-[44px] h-[40px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <TgIcon />
-              </span>
-              <span className="scale-[0.8] md:scale-1 w-[44px] h-[40px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <TwtIcon />
-              </span>
-              <span className="scale-[0.8] md:scale-1 w-[44px] h-[40px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <FaInstagramSquare />
-              </span>
-            </div>
+          <strong className="text-[16px] md:text-[20px] font-bold text-[#000000B2]">
+            {t("socials")}
+          </strong>
+          <div className="flex md:gap-1 mt-[10px] md:mt-[21px]">
+            {[FcbookIcon, YtIcon, TgIcon, TwtIcon, FaInstagramSquare].map(
+              (Icon, index) => (
+                <span
+                  key={index}
+                  className="scale-[0.8] md:scale-1 w-[44px] h-[40px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center"
+                >
+                  <Icon />
+                </span>
+              )
+            )}
           </div>
-          <div className="hidden sm:block mt-[40px]">
+          <div className="block mt-[40px]">
             <strong className="text-[16px] md:text-[20px] font-bold text-[#000000B2]">
               {t("app")}
             </strong>
             <div className="mt-[12px] flex gap-3">
-              <button className="max-w-[188px] scale-[0.8] md:scale-1 w-full h-[66px] cursor-pointer hover:bg-slate-400 duration-300 flex items-center justify-center bg-[#EBEFF3] rounded-[10px] font-bold text-[#0A1729] text-[12px] md:text-[16px] gap-3">
-                <AppStoreIcon />
-                App Store
-              </button>
-              <button className="max-w-[188px] scale-[0.8] md:scale-1 w-full h-[66px] cursor-pointer hover:bg-slate-400 duration-300 flex items-center justify-center bg-[#EBEFF3] rounded-[10px] font-bold text-[#0A1729] text-[12px] md:text-[16px] gap-3">
-                <GPlayIcon />
-                Google Play
-              </button>
+              {[AppStoreIcon, GPlayIcon].map((Icon, index) => (
+                <button
+                  key={index}
+                  className="max-w-[188px] scale-[0.8] md:scale-1 w-full h-[66px] cursor-pointer hover:bg-slate-400 duration-300 flex items-center justify-center bg-[#EBEFF3] rounded-[10px] font-bold text-[#0A1729] text-[12px] md:text-[16px] gap-3"
+                >
+                  <Icon /> {index === 0 ? "App Store" : "Google Play"}
+                </button>
+              ))}
             </div>
           </div>
         </div>
@@ -94,36 +98,17 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <div className="flex flex-col">
-            <strong className="text-[20px] font-bold text-[#000000B2]">
-              {t("contact")}
-            </strong>
-            <a
-              href="tel:+998(71)1234567"
-              className="text-[24px] font-bold text-[#06172D] hover:opacity-70 mt-[13px]"
-            >
-              +998 (71) 123-45-67
-            </a>
-          </div>
+          <strong className="text-[20px] font-bold text-[#000000B2] block">
+            {t("contact")}
+          </strong>
+          <a
+            href="tel:+998(71)1234567"
+            className="text-[24px] font-bold text-[#06172D] hover:opacity-70 mt-[13px]"
+          >
+            +998 (71) 123-45-67
+          </a>
           <div className="mt-8">
             <p className="text-[16px] text-[#000000B2]">{t("question")}</p>
-            <div className="flex sm:hidden gap-[11px] flex-wrap mt-[21px]">
-              <span className="w-[48px] h-[44px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <FcbookIcon />
-              </span>
-              <span className="w-[48px] h-[44px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <YtIcon />
-              </span>
-              <span className="w-[48px] h-[44px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <TgIcon />
-              </span>
-              <span className="w-[48px] h-[44px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <TwtIcon />
-              </span>
-              <span className="w-[48px] h-[44px] rounded-[7px] bg-[#EBEFF3] flex items-center cursor-pointer hover:bg-slate-400 duration-300 justify-center">
-                <FaInstagramSquare />
-              </span>
-            </div>
             <div className="relative hidden sm:block">
               <input
                 type="text"

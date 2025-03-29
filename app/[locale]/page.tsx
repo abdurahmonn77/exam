@@ -1,9 +1,9 @@
 import Brands from "@/modules/Brands";
 import Category from "@/modules/Category";
+import Footer from "@/modules/Footer/page";
 import Hero from "@/modules/Hero";
 import Products from "@/modules/Products";
 import DiscountProduct from "@/modules/Products/DiscountProducts";
-import { Footer } from "antd/es/layout/layout";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
